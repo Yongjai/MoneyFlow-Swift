@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793C2E9E76FDDE8A62F54F4B /* Pods_MoneyFlow_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C447F7A407EFDB3017A1D42 /* Pods_MoneyFlow_Swift.framework */; };
 		CC184AB220C9393C0088E03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AB120C9393C0088E03F /* AppDelegate.swift */; };
 		CC184AB720C9393C0088E03F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC184AB520C9393C0088E03F /* Main.storyboard */; };
 		CC184AB920C9393F0088E03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC184AB820C9393F0088E03F /* Assets.xcassets */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C447F7A407EFDB3017A1D42 /* Pods_MoneyFlow_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyFlow_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E204F510962A606D1BDAE13 /* Pods-MoneyFlow-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyFlow-Swift.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MoneyFlow-Swift/Pods-MoneyFlow-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		CABCA3D9F36BA70D9284BE39 /* Pods-MoneyFlow-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyFlow-Swift.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MoneyFlow-Swift/Pods-MoneyFlow-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CC184AAE20C9393C0088E03F /* MoneyFlow-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoneyFlow-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC184AB120C9393C0088E03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC184AB620C9393C0088E03F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793C2E9E76FDDE8A62F54F4B /* Pods_MoneyFlow_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54DC83FA90C801E3350E5161 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CABCA3D9F36BA70D9284BE39 /* Pods-MoneyFlow-Swift.debug.xcconfig */,
+				0E204F510962A606D1BDAE13 /* Pods-MoneyFlow-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CC184AA520C9393C0088E03F = {
 			isa = PBXGroup;
 			children = (
 				CC184AB020C9393C0088E03F /* MoneyFlow-Swift */,
 				CC184AAF20C9393C0088E03F /* Products */,
+				54DC83FA90C801E3350E5161 /* Pods */,
+				F68877EE22EAD942B67E67B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +152,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		F68877EE22EAD942B67E67B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C447F7A407EFDB3017A1D42 /* Pods_MoneyFlow_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC184AC020C9393F0088E03F /* Build configuration list for PBXNativeTarget "MoneyFlow-Swift" */;
 			buildPhases = (
+				58052A67E72394F63EDFA8D6 /* [CP] Check Pods Manifest.lock */,
 				CC184AAA20C9393C0088E03F /* Sources */,
 				CC184AAB20C9393C0088E03F /* Frameworks */,
 				CC184AAC20C9393C0088E03F /* Resources */,
+				66CBE989A38E430663ED19B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +231,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58052A67E72394F63EDFA8D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyFlow-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CBE989A38E430663ED19B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-MoneyFlow-Swift/Pods-MoneyFlow-Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-MoneyFlow-Swift/Pods-MoneyFlow-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC184AAA20C9393C0088E03F /* Sources */ = {
@@ -358,6 +423,7 @@
 		};
 		CC184AC120C9393F0088E03F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABCA3D9F36BA70D9284BE39 /* Pods-MoneyFlow-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +442,7 @@
 		};
 		CC184AC220C9393F0088E03F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E204F510962A606D1BDAE13 /* Pods-MoneyFlow-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -70,6 +70,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="hrw-pa-Np0" id="am8-zt-bqv"/>
+                                            <outlet property="priceLabel" destination="WIW-vy-2w3" id="6KT-84-wZw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
