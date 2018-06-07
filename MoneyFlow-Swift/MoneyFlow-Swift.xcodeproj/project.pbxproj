@@ -21,6 +21,7 @@
 		CC184AD420C940450088E03F /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD320C940450088E03F /* GraphViewController.swift */; };
 		CC184AD620C940500088E03F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD520C940500088E03F /* DetailViewController.swift */; };
 		CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184ADC20C946030088E03F /* AssetTableViewCell.swift */; };
+		CC184AE420C959CA0088E03F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE320C959CA0088E03F /* Asset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CC184AD320C940450088E03F /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		CC184AD520C940500088E03F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CC184ADC20C946030088E03F /* AssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
+		CC184AE320C959CA0088E03F /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		CC184AD220C940310088E03F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CC184AE020C957490088E03F /* Model */,
 				CC184AD720C940C60088E03F /* Asset */,
 				CC184ADA20C940E00088E03F /* Detail */,
 				CC184AD920C940DB0088E03F /* Graph */,
@@ -150,6 +153,14 @@
 				CC184AD520C940500088E03F /* DetailViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		CC184AE020C957490088E03F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC184AE320C959CA0088E03F /* Asset.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F68877EE22EAD942B67E67B0 /* Frameworks */ = {
@@ -259,10 +270,12 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-MoneyFlow-Swift/Pods-MoneyFlow-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC184AD420C940450088E03F /* GraphViewController.swift in Sources */,
+				CC184AE420C959CA0088E03F /* Asset.swift in Sources */,
 				CC184AC620C939A70088E03F /* AssetViewController.swift in Sources */,
 				CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */,
 				CC184AD620C940500088E03F /* DetailViewController.swift in Sources */,
