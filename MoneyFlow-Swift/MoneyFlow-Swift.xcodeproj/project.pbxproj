@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CC184AB220C9393C0088E03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AB120C9393C0088E03F /* AppDelegate.swift */; };
-		CC184AB420C9393C0088E03F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AB320C9393C0088E03F /* ViewController.swift */; };
 		CC184AB720C9393C0088E03F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC184AB520C9393C0088E03F /* Main.storyboard */; };
 		CC184AB920C9393F0088E03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC184AB820C9393F0088E03F /* Assets.xcassets */; };
 		CC184ABC20C9393F0088E03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC184ABA20C9393F0088E03F /* LaunchScreen.storyboard */; };
@@ -20,12 +19,12 @@
 		CC184AD120C93CFD0088E03F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD020C93CFD0088E03F /* SettingViewController.swift */; };
 		CC184AD420C940450088E03F /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD320C940450088E03F /* GraphViewController.swift */; };
 		CC184AD620C940500088E03F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD520C940500088E03F /* DetailViewController.swift */; };
+		CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184ADC20C946030088E03F /* AssetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC184AAE20C9393C0088E03F /* MoneyFlow-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoneyFlow-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC184AB120C9393C0088E03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC184AB320C9393C0088E03F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC184AB620C9393C0088E03F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC184AB820C9393F0088E03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC184ABB20C9393F0088E03F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		CC184AD020C93CFD0088E03F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CC184AD320C940450088E03F /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		CC184AD520C940500088E03F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CC184ADC20C946030088E03F /* AssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,14 +94,46 @@
 		CC184AD220C940310088E03F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CC184AD720C940C60088E03F /* Asset */,
+				CC184ADA20C940E00088E03F /* Detail */,
+				CC184AD920C940DB0088E03F /* Graph */,
+				CC184AD820C940D50088E03F /* Setting */,
 				CC184AB120C9393C0088E03F /* AppDelegate.swift */,
-				CC184AB320C9393C0088E03F /* ViewController.swift */,
-				CC184AC520C939A70088E03F /* AssetViewController.swift */,
-				CC184AD320C940450088E03F /* GraphViewController.swift */,
-				CC184AD520C940500088E03F /* DetailViewController.swift */,
-				CC184AD020C93CFD0088E03F /* SettingViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		CC184AD720C940C60088E03F /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				CC184AC520C939A70088E03F /* AssetViewController.swift */,
+				CC184ADC20C946030088E03F /* AssetTableViewCell.swift */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		CC184AD820C940D50088E03F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CC184AD020C93CFD0088E03F /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CC184AD920C940DB0088E03F /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				CC184AD320C940450088E03F /* GraphViewController.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		CC184ADA20C940E00088E03F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CC184AD520C940500088E03F /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC184AB420C9393C0088E03F /* ViewController.swift in Sources */,
 				CC184AD420C940450088E03F /* GraphViewController.swift in Sources */,
 				CC184AC620C939A70088E03F /* AssetViewController.swift in Sources */,
+				CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */,
 				CC184AD620C940500088E03F /* DetailViewController.swift in Sources */,
 				CC184AB220C9393C0088E03F /* AppDelegate.swift in Sources */,
 				CC184AD120C93CFD0088E03F /* SettingViewController.swift in Sources */,

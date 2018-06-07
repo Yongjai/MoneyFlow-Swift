@@ -13,7 +13,7 @@
         <!--Detail-->
         <scene sceneID="IZ0-ML-dPd">
             <objects>
-                <viewController id="Bus-bH-Ger" sceneMemberID="viewController">
+                <viewController id="Bus-bH-Ger" customClass="DetailViewController" customModule="MoneyFlow_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQH-y5-MBq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
