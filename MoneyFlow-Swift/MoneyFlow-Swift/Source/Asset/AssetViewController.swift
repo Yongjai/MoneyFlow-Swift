@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AssetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var assetTableView: UITableView!
     let sections: [String] = ["자산", "잔액"]
+    var assets: Results<Assets>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let realm = RealmService.shared.realm
+        assets = realm.objects(Assets.self)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -50,13 +54,20 @@ class AssetViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return assets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = assetTableView.dequeueReusableCell(withIdentifier: "assetCell") as! AssetTableViewCell
-    
+        guard let cell = assetTableView.dequeueReusableCell(withIdentifier: "assetCell") as? AssetTableViewCell else { return UITableViewCell() }
+        
+        let asset = assets[indexPath.row]
+        
+        cell.configure(with: asset)
         return cell
     }
-    
+
+    @IBAction func moveAddAssetViewBtn(_ sender: Any) {
+        let newViewController = AddAssetViewController()
+        self.present(newViewController, animated: true, completion: nil)
+    }
 }

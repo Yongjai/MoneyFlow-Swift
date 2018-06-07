@@ -22,6 +22,9 @@
 		CC184AD620C940500088E03F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AD520C940500088E03F /* DetailViewController.swift */; };
 		CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184ADC20C946030088E03F /* AssetTableViewCell.swift */; };
 		CC184AE420C959CA0088E03F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE320C959CA0088E03F /* Asset.swift */; };
+		CC184AE720C9631E0088E03F /* AddAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE520C9631E0088E03F /* AddAssetViewController.swift */; };
+		CC184AE820C9631E0088E03F /* AddAssetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC184AE620C9631E0088E03F /* AddAssetViewController.xib */; };
+		CC184AEA20C968BC0088E03F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE920C968BC0088E03F /* RealmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		CC184AD520C940500088E03F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CC184ADC20C946030088E03F /* AssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
 		CC184AE320C959CA0088E03F /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		CC184AE520C9631E0088E03F /* AddAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetViewController.swift; sourceTree = "<group>"; };
+		CC184AE620C9631E0088E03F /* AddAssetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAssetViewController.xib; sourceTree = "<group>"; };
+		CC184AE920C968BC0088E03F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				CC184AC920C939E50088E03F /* Detail.storyboard */,
 				CC184ACC20C93BFF0088E03F /* Graph.storyboard */,
 				CC184ACE20C93C070088E03F /* Setting.storyboard */,
+				CC184AE620C9631E0088E03F /* AddAssetViewController.xib */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			children = (
 				CC184AC520C939A70088E03F /* AssetViewController.swift */,
 				CC184ADC20C946030088E03F /* AssetTableViewCell.swift */,
+				CC184AE520C9631E0088E03F /* AddAssetViewController.swift */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CC184AE320C959CA0088E03F /* Asset.swift */,
+				CC184AE920C968BC0088E03F /* RealmService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				CC184ABC20C9393F0088E03F /* LaunchScreen.storyboard in Resources */,
 				CC184AB920C9393F0088E03F /* Assets.xcassets in Resources */,
 				CC184ACF20C93C070088E03F /* Setting.storyboard in Resources */,
+				CC184AE820C9631E0088E03F /* AddAssetViewController.xib in Resources */,
 				CC184AB720C9393C0088E03F /* Main.storyboard in Resources */,
 				CC184ACD20C93BFF0088E03F /* Graph.storyboard in Resources */,
 				CC184ACA20C939E50088E03F /* Detail.storyboard in Resources */,
@@ -293,9 +303,11 @@
 				CC184AE420C959CA0088E03F /* Asset.swift in Sources */,
 				CC184AC620C939A70088E03F /* AssetViewController.swift in Sources */,
 				CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */,
+				CC184AEA20C968BC0088E03F /* RealmService.swift in Sources */,
 				CC184AD620C940500088E03F /* DetailViewController.swift in Sources */,
 				CC184AB220C9393C0088E03F /* AppDelegate.swift in Sources */,
 				CC184AD120C93CFD0088E03F /* SettingViewController.swift in Sources */,
+				CC184AE720C9631E0088E03F /* AddAssetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
