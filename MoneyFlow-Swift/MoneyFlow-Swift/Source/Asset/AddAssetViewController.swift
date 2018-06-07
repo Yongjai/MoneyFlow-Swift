@@ -15,6 +15,7 @@ class AddAssetViewController: UIViewController {
     @IBOutlet weak var priceTextField: UITextField!
     
     var assets: Results<Assets>!
+    var notificationToken: NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class AddAssetViewController: UIViewController {
     
     @IBAction func addAssetBtnClicked(_ sender: Any) {
         let newAsset = Assets(item: itemTextField.text!, price: Int(priceTextField.text!)!)
+        
         RealmService.shared.create(newAsset)
         dismiss(animated: true, completion: nil)
     }

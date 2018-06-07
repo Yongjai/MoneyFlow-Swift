@@ -14,11 +14,16 @@ class AssetViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var assetTableView: UITableView!
     let sections: [String] = ["자산", "잔액"]
     var assets: Results<Assets>!
+    var notificationToken: NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = RealmService.shared.realm
         assets = realm.objects(Assets.self)
+        
+        notificationToken = realm.observe({ (notification, realm) in
+            self.assetTableView.reloadData()
+        })
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
