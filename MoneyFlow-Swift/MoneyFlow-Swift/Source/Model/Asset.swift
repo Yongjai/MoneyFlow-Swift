@@ -8,5 +8,18 @@
 
 import RealmSwift
 
-
-
+@objcMembers class Assets: Object {
+    dynamic var item: String = ""
+    let price = RealmOptional<Int>()
+    
+    convenience init(item: String, price: Int) {
+        self.init()
+        self.item = item
+        self.price.value = price
+    }
+    
+    func priceString() -> String? {
+        guard let price = price.value else { return nil }
+        return String(price)
+    }
+}
