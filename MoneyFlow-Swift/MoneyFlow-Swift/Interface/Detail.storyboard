@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="91" width="375" height="638"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-CZ-LRm">
-                                        <rect key="frame" x="0.0" y="71" width="375" height="547"/>
+                                        <rect key="frame" x="0.0" y="67" width="375" height="571"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eap-Ye-5Ek">
                                             <size key="itemSize" width="50" height="50"/>
@@ -30,6 +30,11 @@
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
+                                        <view key="backgroundView" contentMode="scaleToFill" id="4xO-aZ-bJi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calendarCell" id="26k-It-lgQ" customClass="CalendarCollectionViewCell" customModule="MoneyFlow_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
@@ -59,7 +64,7 @@
                                                         </label>
                                                     </subviews>
                                                 </view>
-                                                <color key="backgroundColor" red="0.45061528497409331" green="0.36184463873760875" blue="0.28004210249652028" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.45061528497409331" green="0.36184463873760875" blue="0.28004210249652028" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="wB9-i2-jFB" firstAttribute="top" secondItem="26k-It-lgQ" secondAttribute="top" id="6gq-MS-Hi9"/>
                                                     <constraint firstAttribute="trailing" secondItem="bTS-X7-Vd5" secondAttribute="trailing" id="9Xv-xU-5Ce"/>
@@ -79,12 +84,59 @@
                                             <outlet property="delegate" destination="Bus-bH-Ger" id="Zmu-pu-lge"/>
                                         </connections>
                                     </collectionView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0QP-px-ziy">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.99999994039535522" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="YhZ-WV-jDf"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K1J-CO-2uz">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weekdayCell" id="YQc-ro-obM" customClass="WeekdayCollectionViewCell" customModule="MoneyFlow_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A73-YT-MPj">
+                                                            <rect key="frame" x="4" y="7" width="42" height="35"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="A73-YT-MPj" firstAttribute="leading" secondItem="YQc-ro-obM" secondAttribute="leading" constant="4" id="7hS-gX-R1V"/>
+                                                    <constraint firstItem="A73-YT-MPj" firstAttribute="top" secondItem="YQc-ro-obM" secondAttribute="top" constant="7" id="Aa5-pb-vaj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A73-YT-MPj" secondAttribute="trailing" constant="4" id="DwE-Xd-hHG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="A73-YT-MPj" secondAttribute="bottom" constant="8" id="hei-Wl-HRA"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="weekdayLabel" destination="A73-YT-MPj" id="H7W-GH-skV"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Bus-bH-Ger" id="YPW-Fe-Jwj"/>
+                                            <outlet property="delegate" destination="Bus-bH-Ger" id="EJZ-3c-Wvm"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.64355974740932642" green="0.64355974740932642" blue="0.64355974740932642" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.84757529145077726" green="0.84757529145077726" blue="0.84757529145077726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="yc8-CZ-LRm" firstAttribute="top" secondItem="MjI-yI-ZrJ" secondAttribute="top" constant="71" id="8KQ-YX-rVp"/>
-                                    <constraint firstAttribute="bottom" secondItem="yc8-CZ-LRm" secondAttribute="bottom" constant="20" id="G5W-L9-Vdg"/>
+                                    <constraint firstAttribute="trailing" secondItem="0QP-px-ziy" secondAttribute="trailing" id="5Ve-Ui-bru"/>
+                                    <constraint firstItem="yc8-CZ-LRm" firstAttribute="top" secondItem="MjI-yI-ZrJ" secondAttribute="top" constant="67" id="8KQ-YX-rVp"/>
+                                    <constraint firstAttribute="bottom" secondItem="yc8-CZ-LRm" secondAttribute="bottom" id="G5W-L9-Vdg"/>
+                                    <constraint firstItem="0QP-px-ziy" firstAttribute="leading" secondItem="MjI-yI-ZrJ" secondAttribute="leading" id="QkC-7S-fJK"/>
                                     <constraint firstItem="yc8-CZ-LRm" firstAttribute="leading" secondItem="MjI-yI-ZrJ" secondAttribute="leading" id="UOG-D0-lcV"/>
+                                    <constraint firstItem="yc8-CZ-LRm" firstAttribute="top" secondItem="0QP-px-ziy" secondAttribute="bottom" constant="-1" id="gpp-U1-h9o"/>
                                     <constraint firstAttribute="trailing" secondItem="yc8-CZ-LRm" secondAttribute="trailing" id="rkI-ay-4Jt"/>
                                 </constraints>
                             </view>
@@ -117,6 +169,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarCollectionView" destination="yc8-CZ-LRm" id="Cd2-iy-c8a"/>
+                        <outlet property="weekdayCollectionView" destination="0QP-px-ziy" id="Dg4-u1-vxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNW-7h-Xd5" userLabel="First Responder" sceneMemberID="firstResponder"/>

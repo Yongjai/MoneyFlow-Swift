@@ -8,19 +8,21 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class DetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var calendarCollectionView: UICollectionView!
+    @IBOutlet weak var weekdayCollectionView: UICollectionView!
     
+    let weekdays: [String] = ["일", "월", "화", "수", "목", "금", "토"]
     var date = Date()
     
-    let calendarLayout = CalendarFlowLayout(
-        sectionInset: UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
-    )
+    let calendarLayout = CalendarFlowLayout(sectionInset: UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5))
+    let weekdaysLayout = WeekdayFlowLayout(sectionInset: UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarCollectionView.setCollectionViewLayout(calendarLayout, animated: false)
+        weekdayCollectionView.setCollectionViewLayout(weekdaysLayout, animated: false)
     }
     
     func dateInfo(date: Date) -> DateComponents {
@@ -46,7 +48,10 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // 36개보다 많을 수가 없음.
+        if collectionView == weekdayCollectionView {
+            return 7
+        }
+        
         return 36
     }
     
@@ -55,7 +60,18 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
         var indexPathComponent = dateInfo(date: date)
         indexPathComponent.day = indexPath.item - firstWeekDayThisMonth(date: date) + 2
         
-        let cell = collectionView .dequeueReusableCell(withReuseIdentifier:"calendarCell", for: indexPath) as! CalendarCollectionViewCell
+        if collectionView == weekdayCollectionView {
+            let cell =  collectionView.dequeueReusableCell(withReuseIdentifier:"weekdayCell", for: indexPath) as! WeekdayCollectionViewCell
+            cell.weekdayLabel.text = weekdays[indexPath.item]
+            cell.layer.shadowColor = UIColor.gray.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+            cell.layer.shadowRadius = 2.0
+            cell.layer.shadowOpacity = 1.0
+            cell.layer.masksToBounds = false
+            
+            return cell
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"calendarCell", for: indexPath) as! CalendarCollectionViewCell
         
         if indexPath.item < firstWeekDayThisMonth(date: date) - 1 {
             cell.dateLabel.text = ""
@@ -64,10 +80,10 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
             
         } else if indexPath.item >= firstWeekDayThisMonth(date: date) - 1 && (indexPath.item - firstWeekDayThisMonth(date: date) + 2) <= numberOfDaysInMonth(myDate: date) {
             cell.dateLabel.text = "\(indexPath.item - firstWeekDayThisMonth(date: date) + 2)"
+            cell.layer.borderWidth = 0.2
+            cell.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             
             if currentDateComponents == indexPathComponent {
-                cell.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-            } else {
                 cell.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
             }
         } else {
