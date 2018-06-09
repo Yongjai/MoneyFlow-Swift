@@ -12,7 +12,6 @@ class WeekdayView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor=UIColor.clear
         
         setupViews()
     }
@@ -21,9 +20,9 @@ class WeekdayView: UIView {
         addSubview(weekdayStackView)
         
         var daysArr = ["일", "월", "화", "수", "목", "금", "토"]
-        for index in 0..<7 {
+        for index in 0...6 {
             let label = UILabel()
-            label.text=daysArr[index]
+            label.text = daysArr[index]
             label.textAlignment = .center
             weekdayStackView.addArrangedSubview(label)
         }

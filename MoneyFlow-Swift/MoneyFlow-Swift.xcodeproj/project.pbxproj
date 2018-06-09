@@ -25,9 +25,9 @@
 		CC184AE720C9631E0088E03F /* AddAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE520C9631E0088E03F /* AddAssetViewController.swift */; };
 		CC184AE820C9631E0088E03F /* AddAssetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC184AE620C9631E0088E03F /* AddAssetViewController.xib */; };
 		CC184AEA20C968BC0088E03F /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AE920C968BC0088E03F /* RealmService.swift */; };
-		CC184AEC20CA8C060088E03F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AEB20CA8C060088E03F /* CalendarViewController.swift */; };
-		CC184AF020CAA8FC0088E03F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AEF20CAA8FC0088E03F /* CalendarCollectionViewCell.swift */; };
 		CC184AF220CAB5D10088E03F /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AF120CAB5D10088E03F /* WeekdayView.swift */; };
+		CC184AF420CBD9CD0088E03F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AF320CBD9CD0088E03F /* CalendarView.swift */; };
+		CC184AF620CBDEB40088E03F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC184AF520CBDEB40088E03F /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +53,9 @@
 		CC184AE520C9631E0088E03F /* AddAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetViewController.swift; sourceTree = "<group>"; };
 		CC184AE620C9631E0088E03F /* AddAssetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAssetViewController.xib; sourceTree = "<group>"; };
 		CC184AE920C968BC0088E03F /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		CC184AEB20CA8C060088E03F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		CC184AEF20CAA8FC0088E03F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC184AF120CAB5D10088E03F /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
+		CC184AF320CBD9CD0088E03F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		CC184AF520CBDEB40088E03F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				CC184AD520C940500088E03F /* DetailViewController.swift */,
-				CC184AEB20CA8C060088E03F /* CalendarViewController.swift */,
-				CC184AEF20CAA8FC0088E03F /* CalendarCollectionViewCell.swift */,
 				CC184AF120CAB5D10088E03F /* WeekdayView.swift */,
+				CC184AF320CBD9CD0088E03F /* CalendarView.swift */,
+				CC184AF520CBDEB40088E03F /* CalendarCollectionViewCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -308,12 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC184AF020CAA8FC0088E03F /* CalendarCollectionViewCell.swift in Sources */,
-				CC184AEC20CA8C060088E03F /* CalendarViewController.swift in Sources */,
+				CC184AF620CBDEB40088E03F /* CalendarCollectionViewCell.swift in Sources */,
 				CC184AD420C940450088E03F /* GraphViewController.swift in Sources */,
 				CC184AE420C959CA0088E03F /* Asset.swift in Sources */,
 				CC184AC620C939A70088E03F /* AssetViewController.swift in Sources */,
 				CC184ADD20C946030088E03F /* AssetTableViewCell.swift in Sources */,
+				CC184AF420CBD9CD0088E03F /* CalendarView.swift in Sources */,
 				CC184AEA20C968BC0088E03F /* RealmService.swift in Sources */,
 				CC184AD620C940500088E03F /* DetailViewController.swift in Sources */,
 				CC184AB220C9393C0088E03F /* AppDelegate.swift in Sources */,

@@ -18,26 +18,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t0P-WW-Pok">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t0P-WW-Pok">
                                 <rect key="frame" x="139" y="36" width="97" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.99999994039535522" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="dxF-wr-WuU"/>
+                                    <constraint firstAttribute="height" constant="28" id="teM-8Y-WhK"/>
+                                </constraints>
                                 <segments>
                                     <segment title="달력"/>
                                     <segment title="리스트"/>
                                 </segments>
                             </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-CZ-LRm">
+                                <rect key="frame" x="0.0" y="126" width="375" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="492" id="07x-Qw-CcQ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eap-Ye-5Ek">
+                                    <size key="itemSize" width="50" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calendarCell" id="26k-It-lgQ" customClass="CalendarCollectionViewCell" customModule="MoneyFlow_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTS-X7-Vd5">
+                                                    <rect key="frame" x="0.0" y="30" width="50" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="8Ro-jG-bWu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB9-i2-jFB">
+                                                    <rect key="frame" x="28" y="0.0" width="22" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="K61-GN-3fR"/>
+                                                        <constraint firstAttribute="height" constant="21" id="KLd-xR-Ua7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.45061528497409331" green="0.36184463873760875" blue="0.28004210249652028" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="wB9-i2-jFB" firstAttribute="top" secondItem="26k-It-lgQ" secondAttribute="top" id="6gq-MS-Hi9"/>
+                                            <constraint firstAttribute="trailing" secondItem="bTS-X7-Vd5" secondAttribute="trailing" id="9Xv-xU-5Ce"/>
+                                            <constraint firstItem="bTS-X7-Vd5" firstAttribute="top" secondItem="wB9-i2-jFB" secondAttribute="bottom" constant="9" id="FZ3-yN-6t4"/>
+                                            <constraint firstItem="bTS-X7-Vd5" firstAttribute="leading" secondItem="26k-It-lgQ" secondAttribute="leading" id="hwG-OJ-9JB"/>
+                                            <constraint firstAttribute="trailing" secondItem="wB9-i2-jFB" secondAttribute="trailing" id="koT-aF-jIh"/>
+                                        </constraints>
+                                        <size key="customSize" width="50" height="60"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="wB9-i2-jFB" id="fzc-jd-mZO"/>
+                                            <outlet property="dayTotalLabel" destination="bTS-X7-Vd5" id="RkN-nA-LKB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bus-bH-Ger" id="mWU-Qv-3A2"/>
+                                    <outlet property="delegate" destination="Bus-bH-Ger" id="Zmu-pu-lge"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254914045333862" green="0.97254914045333862" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.35115910830067087" green="0.11463443316601268" blue="0.45061528497409331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OMt-Bm-kdp" firstAttribute="bottom" secondItem="yc8-CZ-LRm" secondAttribute="bottom" id="D2H-F3-n2c"/>
+                            <constraint firstItem="yc8-CZ-LRm" firstAttribute="trailing" secondItem="OMt-Bm-kdp" secondAttribute="trailing" id="LyZ-np-mp3"/>
+                            <constraint firstItem="t0P-WW-Pok" firstAttribute="centerX" secondItem="eQH-y5-MBq" secondAttribute="centerX" id="kgH-LN-cIc"/>
+                            <constraint firstItem="t0P-WW-Pok" firstAttribute="top" secondItem="OMt-Bm-kdp" secondAttribute="top" constant="16" id="q9C-cU-pBG"/>
+                            <constraint firstItem="yc8-CZ-LRm" firstAttribute="top" secondItem="t0P-WW-Pok" secondAttribute="bottom" constant="62" id="tkr-if-4jA"/>
+                            <constraint firstItem="yc8-CZ-LRm" firstAttribute="leading" secondItem="OMt-Bm-kdp" secondAttribute="leading" id="yfW-PS-WMZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OMt-Bm-kdp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detail" id="XDj-yG-XPJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="yc8-CZ-LRm" id="Cd2-iy-c8a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNW-7h-Xd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="103"/>
+            <point key="canvasLocation" x="125.59999999999999" y="102.99850074962519"/>
         </scene>
     </scenes>
 </document>
