@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1W6-qP-6ty">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,21 +15,21 @@
             <objects>
                 <viewController id="1W6-qP-6ty" customClass="AssetViewController" customModule="MoneyFlow_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Fg-XF-mEu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-yV-cMw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                 <color key="backgroundColor" red="0.96862751245498657" green="0.96862751245498657" blue="0.96862751245498657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="DXy-Z8-I7T"/>
+                                    <constraint firstAttribute="height" constant="92" id="DXy-Z8-I7T"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-Jz-JxE">
-                                <rect key="frame" x="10" y="30" width="79" height="30"/>
+                                <rect key="frame" x="10" y="54" width="79" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="Avz-XI-2lg"/>
                                     <constraint firstAttribute="height" constant="30" id="tT8-6k-4P0"/>
@@ -39,7 +39,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5su-EL-Wkz">
-                                <rect key="frame" x="321" y="30" width="30" height="30"/>
+                                <rect key="frame" x="321" y="54" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="PDZ-0y-6Wy"/>
                                     <constraint firstAttribute="height" constant="30" id="YBf-vD-pDe"/>
@@ -50,17 +50,17 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-iL-RgX">
-                                <rect key="frame" x="0.0" y="78" width="375" height="540"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="620"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="540" id="uD1-uJ-4P1"/>
+                                    <constraint firstAttribute="height" constant="620" id="uD1-uJ-4P1"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="assetCell" rowHeight="90" id="TkH-NA-0fj" customClass="AssetTableViewCell" customModule="MoneyFlow_Swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TkH-NA-0fj" id="9xB-ao-wxT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2000000원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIW-vy-2w3">
@@ -98,7 +98,7 @@
                             <constraint firstItem="UJs-Jz-JxE" firstAttribute="leading" secondItem="1zl-dT-EgD" secondAttribute="leading" constant="10" id="BpT-hN-6Xh"/>
                             <constraint firstItem="1zl-dT-EgD" firstAttribute="trailing" secondItem="5su-EL-Wkz" secondAttribute="trailing" constant="24" id="ERc-uw-k54"/>
                             <constraint firstItem="NJg-iL-RgX" firstAttribute="trailing" secondItem="1zl-dT-EgD" secondAttribute="trailing" id="FNN-av-7HZ"/>
-                            <constraint firstItem="NJg-iL-RgX" firstAttribute="top" secondItem="ST6-yV-cMw" secondAttribute="bottom" constant="8" id="IfC-Ev-W3T"/>
+                            <constraint firstItem="NJg-iL-RgX" firstAttribute="top" secondItem="ST6-yV-cMw" secondAttribute="bottom" constant="17" id="IfC-Ev-W3T"/>
                             <constraint firstItem="5su-EL-Wkz" firstAttribute="top" secondItem="1zl-dT-EgD" secondAttribute="top" constant="10" id="L7m-Nj-y6Y"/>
                             <constraint firstItem="ST6-yV-cMw" firstAttribute="top" secondItem="5Fg-XF-mEu" secondAttribute="top" id="doS-US-jPH"/>
                             <constraint firstItem="ST6-yV-cMw" firstAttribute="trailing" secondItem="1zl-dT-EgD" secondAttribute="trailing" id="e6G-fT-oG6"/>
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYL-kQ-COM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461.60000000000002" y="-286.50674662668666"/>
+            <point key="canvasLocation" x="461.60000000000002" y="-286.69950738916259"/>
         </scene>
     </scenes>
 </document>
